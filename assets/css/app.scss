@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import './modules/_variables.scss'; 
+@import './modules/_mixin.scss';
+
+html,body{
+    font-family: 'Raleway', sans-serif;	 
+	margin: 0px;
+}
+
+img{
+    max-width: 100%;
+}
+figure{
+	position: relative;
+	max-height: 100%;
+	margin:0;
+	figcaption{
+		@include text-bot;
+		
+	}
+}
+
+.btn{
+	padding: $large-padding;
+	color: $black !important;
+	position: relative;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	&:before{
+		content:'';
+		position: absolute;
+		background-color: $azul-mate;
+		width: 100%;
+		height: 40%;
+		z-index: -1;
+		left:0px;
+		bottom: 0px;
+		transition: all 0.2s ease-out;
+	}
+	&:hover::before{
+		height: 100%;
+	}
+
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr)
+    
+}
+.main{
+	margin-top: $big-margin-top;
+	margin-bottom: $big-margin-top;
+	display: grid;
+	grid-template-columns: repeat(9,1fr);
+	grid-template-areas: "title title title title title title title title title"
+	"images images images images images images images images images";
+	.main-title{
+		grid-area: title;
+		@include main-text;
+	}
+
+	.main-image{
+		grid-area: images;
+	}
+}
+
+.container{
+	grid-column: span 12;
+	padding: $big-padding;
+}
+
+
+//--------------------- section 2 ---------------------------
+
+.cover{
+	@include absolute-cover;
+	min-height: 500px;
+	background-size: cover;
+	background-position: center;
+	// position: relative;
+	&.parallax{
+		background-image:url(../../public/images/girl.jpg);
+		background-attachment: fixed;
+		
+	}
+	p{
+		@include text-bot;
+	}
+}
+
+//------------------------ section3 ----------------------------
+
+.full-height{
+	min-height: 100vh;
+}
+ 
+.mission{
+	align-items: center;
+	.container{
+		@include main-text;
+		font-size: 1.1em;
+		figure{
+			float:right;
+		}
+		p{
+			font-weight: 200;
+			line-height: 2em;
+			&:nth-of-type(1){
+
+				margin-bottom: 3em;
+				position: relative;
+				&::after{
+					content: '';
+					width: 80%;
+					position:absolute;
+					bottom: -1.5em;
+					background-color: $opaco;
+					height: 7px;
+					z-index: -1;
+					right: 0px;
+				}
+			}
+		}
+	}
+}
+
+// ----------------section 4 contacto------------------------
+
+.contact{
+	text-align: center;
+	a{
+		display: block;
+		
+		margin: 1em auto;
+		max-width: 150px;
+		
+	}
+p.title{
+	
+	letter-spacing: 2px;
+	color: $azul-mate;
+	font-size: 1.5em;
+	font-weight: bold;
+
+}
+}
+
+// -------------   media ------------------------------------
+
+@media (min-width: 960px){
+    .main{
+        grid-template-areas: "title title title images images images images images images";
+    }
+    .container{
+    	grid-column: 2 / 12;
+		}
+	.contact{
+		
+		a{
+			display: inline-block;
+			margin-right: 90px;
+			&:last-of-type{
+				margin-right: 0px;
+			}
+		}
+	}
+}
