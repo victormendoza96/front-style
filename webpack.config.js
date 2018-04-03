@@ -13,6 +13,11 @@ module.exports={
         path: path.join(__dirname, '..'),
         filename: 'dist/javascript/bundle.js'
     },
+    devServer: {
+    open: true,
+    inline:true,
+    port: 8000
+  },
     plugins: [htmlWebpack],
     module:{
         rules: [

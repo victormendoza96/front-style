@@ -3,7 +3,7 @@
 @import './modules/_mixin.scss';
 
 html,body{
-    font-family: 'Raleway', sans-serif;	 
+  font-family: 'Raleway', sans-serif;	 
 	margin: 0px;
 }
 
@@ -73,7 +73,7 @@ figure{
 }
 
 
-//--------------------- section 2 ---------------------------
+//--------------------- section parallax---------------------------
 
 .cover{
 	@include absolute-cover;
@@ -90,8 +90,24 @@ figure{
 		@include text-bot;
 	}
 }
+//---------------------------seccion slide----------------------------
 
-//------------------------ section3 ----------------------------
+.slide{
+  header{
+    background-color: $opaco;
+    color: white;
+    padding: $large-padding;
+    transform: translateY(100px);
+    max-width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    h2{
+      margin: 0px;
+    }
+  }
+}
+
+//------------------------ section mission----------------------------
 
 .full-height{
 	min-height: 100vh;
@@ -127,7 +143,7 @@ figure{
 	}
 }
 
-// ----------------section 4 contacto------------------------
+// ----------------section contacto------------------------
 
 .contact{
 	text-align: center;
@@ -156,7 +172,16 @@ p.title{
     }
     .container{
     	grid-column: 2 / 12;
-		}
+    }
+    
+    .slide{
+      align-items: center;
+      header{
+        transform: translateX(100px);
+        width: 100%;
+        min-height: 350px;
+      }
+    }
 	.contact{
 		
 		a{
