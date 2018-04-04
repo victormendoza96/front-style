@@ -97,12 +97,27 @@ figure{
     background-color: $opaco;
     color: white;
     padding: $large-padding;
-    transform: translateY(100px);
+    transform: translateY(40px);
     max-width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
     h2{
       margin: 0px;
+    }
+  }
+  .separator{
+    text-align: right;
+    padding-right: 140px;
+    position: relative;
+    color: white;
+    &::after{
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 130px;
+      background-color: white;
+      top:50%;
+      right: 0px;
     }
   }
 }

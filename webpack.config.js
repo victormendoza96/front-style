@@ -26,6 +26,16 @@ module.exports={
                 use: ['style-loader','css-loader','sass-loader']
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options:{
+                        presets:['env', 'stage-2']
+                    }
+                }
+            },
+            {
                 test: /\.jpg$/,
                 use:'url-loader'
             }
