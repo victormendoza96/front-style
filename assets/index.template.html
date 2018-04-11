@@ -4,10 +4,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 	<title>webpack</title>
 </head>
 <body>
-	<section>
+  <div class="btn-menu">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  <div class="menu"> 
+    <div class="close">
+      <i class="fas fa-times fa-2x"></i>
+    </div>
+    <nav>
+      <a href="#home">
+        <span class="btn-text">inicio</span>
+        <span>sobre mi</span>
+      </a>
+      <a href="#abaut-s">
+        <span class="btn-text">curso</span>
+        <span>sobre el curso</span>
+      </a>
+      <a href="#abaut">
+        <span class="btn-text">como</span>
+        <span>que hacer</span>
+      </a>
+      <a href="#contact">
+        <span class="btn-text">contacto</span>
+        <span>como encontrarme</span>
+      </a>
+    </nav>
+  </div>
+  
+	<section id="home">
 		<div class="grid">
 			<div class="container">
 				<div class="main">
@@ -33,21 +61,32 @@
 		</div>
 	</section>
 
-	<section>
+	<section >
 		<div class="cover parallax">	
 			<p>cualquier edad</p>
 		</div>
 	</section>
 
-	<section>
+	<section id="abaut-s">
 		<div class="main slide">
 			<div class="main-title">
+				<div class="arrows">
+					<div class="a-left">
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</div>
+					<div class="a-right">
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</div>
+				</div>
 				<header>
-					<p id="slider-subtitle" class="separator">noseeeeee</p>
-					<h2 id="slider-title">lorem ipsum</h2>
+					<div id="slider-content">
+					<p id="slider-title" class="separator">noseeeeee</p>
+					<h2 id="slider-subtitle">lorem ipsum</h2>
 					<p id="slider-text">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quo optio maiores, quisquam omnis iste quod expedita. Rem provident amet eveniet consequuntur labore iusto eos, nihil, quis odio eum magni.
 					</p>
+
+					</div>
 				</header>
 
 			</div>
@@ -58,7 +97,7 @@
 		</div>
 	</section>
 	
-	<section>
+	<section id="abaut">
 		<div class="grid full-height mission">
 			<div class="container">
 				<h1>hacer</h1>
@@ -76,7 +115,7 @@
 		</div>
 	</section>
 
-  <section>
+  <section id="contact">
     <div class="grid contact">
       <div class="container">
         <p class="title">Contacto</p>

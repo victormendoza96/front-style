@@ -37,7 +37,20 @@ module.exports={
             },
             {
                 test: /\.jpg$/,
-                use:'url-loader'
+                use:{
+                    loader:'url-loader',
+                    options: {
+                        limit: 35000
+                    }
+                }
+            },
+            { 
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+                use:{loader: "file-loader"}
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'url?limit=10000',
             }
         ]
     }
